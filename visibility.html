@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		html,body{height: 100%;}
+		*{margin:0;padding:0;}
+		.demo{height: 100%;transition:all 2s;-webkit-transition:all 2s;background-color: yellow;opacity:0;font-size:100px;}
+		div{transition:all .5s;-webkit-transition:all .5s;}
+		.yellow{opacity: 1;}
+	</style>
+</head>
+<body>
+	<div class="demo" id="demo"></div>
+	<script>
+document.addEventListener("visibilitychange", function() {
+    if (document.hidden) {     
+    	//demo.classList.remove("yellow");
+    } else {
+        demo.classList.add("yellow");
+        setTimeout(function(){
+        	demo.classList.remove("yellow")
+        },500);
+    } 
+});
+	</script>
+</body>
+</html>
